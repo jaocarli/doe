@@ -1,6 +1,6 @@
 # DOE (MaratonaDev 3.0) da Rocketseat :rocket:
 
-![](./frontend/img/logo.png)
+![](./public/logo.png)
 
 ## :rocket: Tecnologias usadas
 Este maravilindo projeto foi desenvolvido com as seguintes tecnologias:
