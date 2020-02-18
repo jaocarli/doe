@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Doe sangue! Doe vida!</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header>
-    <img class="logo" src="./img/logo.png" alt="DOE">
+    <img class="logo" src="/logo.png" alt="DOE">
     <h2>A sua doação importa!</h2>
     <p>Até 3 vidas com apenas <b>uma</b> doação</p>
     <p>Mais de 38.000 doações são necessárias <b>todos os dias</b></p>
@@ -21,7 +21,7 @@
 
   <section class="form hide">
     <h2>Faça parte da nossa lista de doadores! 🩸</h2>
-    <form action="/">
+    <form action="/" method="POST">
       <input type="text" name="name" placeholder="Nome Completo">
       <input type="text" name="email" placeholder="Email">
       <input type="text" name="blood" placeholder="Tipo Sanguíneo">
@@ -33,22 +33,15 @@
     <h2>Últimos <span>doadores</span></h2>
 
     <section class="donors">
-      <div class="donor">
-        <div class="blood">AB+</div>
-        <p>Diego Fernandes</p>
-      </div>
-      <div class="donor">
-        <div class="blood">B+</div>
-        <p>João Carli</p>
-      </div>
-      <div class="donor">
-        <div class="blood">A+</div>
-        <p>Mayk Brito</p>
-      </div>
-      <div class="donor">
-        <div class="blood">O+</div>
-        <p>Cleiton Silva</p>
-      </div>
+
+      {% for donor in donors %}
+
+        <div class="donor">
+          <div class="blood">{{donor.blood}}</div>
+          <p>{{donor.name}}</p>
+        </div>
+
+      {%endfor%}
     </section>
   </main>
 
@@ -57,5 +50,5 @@
   </footer>
 </body>
 
-<script src="./js/scripts.js"></script>
+<script src="/scripts.js"></script>
 </html>
