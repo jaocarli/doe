@@ -3,9 +3,7 @@ const server = express()
 
 server.use(express.static('../frontend/public'))
 
-server.use(express.urlencoded({
-  extended: true
-}))
+server.use(express.urlencoded({ extended: true}))
 
 const Pool = require('pg').Pool
 const db = new Pool({
@@ -22,20 +20,18 @@ nunjucks.configure("../frontend", {
   noCache: true,
 })
 
-server.get("/", function (req, res) {
+server.get("/", function(req, res){
 
 
-  db.query("SELECT * FROM donors", function (err, result) {
+  db.query("SELECT * FROM donors", function(err, result) {
     if (err) return res.send("Erro de banco de dados")
-
+    
     const donors = result.rows
-    return res.render("../frontend/index.html", {
-      donors
-    })
+    return res.render("../frontend/index.html", { donors })
 
 
   })
-
+  
 })
 
 server.post("/", function (req, res) {
@@ -45,15 +41,15 @@ server.post("/", function (req, res) {
   const phone = req.body.phone
 
   if (name == "" || email == "" || blood == "") {
-    return res.send("Todos os campos são obrigatórios.")
+      return res.send("Todos os campos são obrigatórios.")
   }
 
   const query = `INSERT INTO donors ("name", "email", "blood")
   VALUES ($1, $2, $3)`
-
-  const values = [name, email, blood]
-
-  db.query(query, values, function (err) {
+  
+  const values =  [name, email, blood]
+  
+  db.query(query, values, function(err) {
     // fluxo de erro
     if (err) return res.send("erro no banco de dados.")
 
@@ -64,4 +60,4 @@ server.post("/", function (req, res) {
 
 })
 
-server.listen(3000, function () {})
+server.listen(3000, function() {})
