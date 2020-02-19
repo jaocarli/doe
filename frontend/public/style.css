@@ -38,7 +38,9 @@ header h1, main h2 {
   margin-bottom: 70px;
 }
 
-
+header b, h2 {
+  color: #ff4f4f;
+}
 
 main h2 span {
   color: #ff4f4f;
@@ -135,6 +137,11 @@ footer {
   margin-top: auto;
   padding: 16px;
   border: 1px solid #eee;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ff4f4f;
 }
 
 section.form {
