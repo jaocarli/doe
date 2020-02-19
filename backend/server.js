@@ -1,7 +1,7 @@
 const express = require("express")
 const server = express()
 
-server.use(express.static('public'))
+server.use(express.static('../frontend/public'))
 
 server.use(express.urlencoded({ extended: true}))
 
@@ -15,7 +15,7 @@ const db = new Pool({
 })
 
 const nunjucks = require("nunjucks")
-nunjucks.configure("./", {
+nunjucks.configure("../frontend", {
   express: server,
   noCache: true,
 })
@@ -27,7 +27,7 @@ server.get("/", function(req, res){
     if (err) return res.send("Erro de banco de dados")
     
     const donors = result.rows
-    return res.render("index.html", { donors })
+    return res.render("../frontend/index.html", { donors })
 
 
   })

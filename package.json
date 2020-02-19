@@ -6,16 +6,5 @@
     "nodemon": "^2.0.2",
     "nunjucks": "^3.2.0",
     "pg": "^7.18.1"
-  },
-  "name": "doe",
-  "version": "1.0.0",
-  "main": "scripts.js",
-  "devDependencies": {},
-  "scripts": {
-    "start": "nodemon server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }
