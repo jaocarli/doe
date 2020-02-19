@@ -1,13 +1,10 @@
 const express = require("express")
 const server = express()
 
-// apresentar arquivos estáticos
 server.use(express.static('public'))
 
-// body formulário
 server.use(express.urlencoded({ extended: true}))
 
-// configurar conexão ao banco de dados
 const Pool = require('pg').Pool
 const db = new Pool({
     user: 'postgres',
@@ -17,7 +14,6 @@ const db = new Pool({
     database: 'doe'
 })
 
-// template engine
 const nunjucks = require("nunjucks")
 nunjucks.configure("./", {
   express: server,
@@ -47,7 +43,6 @@ server.post("/", function (req, res) {
       return res.send("Todos os campos são obrigatórios.")
   }
 
-  // valores dentro do db
   const query = `INSERT INTO donors ("name", "email", "blood")
   VALUES ($1, $2, $3)`
   
