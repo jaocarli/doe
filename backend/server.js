@@ -38,6 +38,7 @@ server.post("/", function (req, res) {
   const name = req.body.name
   const email = req.body.email
   const blood = req.body.blood
+  const phone = req.body.phone
 
   if (name == "" || email == "" || blood == "") {
       return res.send("Todos os campos são obrigatórios.")
@@ -59,6 +60,4 @@ server.post("/", function (req, res) {
 
 })
 
-server.listen(3000, function() {
-  console.log("cheguei! =D")
-})
+server.listen(3000, function() {})
