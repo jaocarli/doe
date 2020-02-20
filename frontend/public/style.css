@@ -1,15 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
-*{
+* {
   box-sizing: border-box;
 }
 
-html {
-  overflow-y: scroll;
+b {
+  color: #ff4f4f;
 }
 
 html, body {
-  margin: 0;
+  margin: 0px;
+}
+
+header h2 {
+  color: #ff4f4f;
+}
+
+h1, h2 {
+  color: #000000ee
 }
 
 body {
@@ -20,30 +28,14 @@ body {
   background-color: #f9f9f9;
 }
 
-h1, h2 {
-  color: #000000cc;
-}
-
-header, main, footer{
+header, main, footer {
   text-align: center;
 }
 
 header, .form, main {
-  margin: 0 auto 70px;
-  width: 90%;
+  margin: 0 auto 30px auto;
+  width:  90%;
   max-width: 500px;
-}
-
-header h1, main h2 {
-  margin-bottom: 70px;
-}
-
-header b, h2 {
-  color: #ff4f4f;
-}
-
-main h2 span {
-  color: #ff4f4f;
 }
 
 header button {
@@ -52,23 +44,26 @@ header button {
   border-radius: 4px;
   border: none;
   background-color: #ff4f4f;
-  color: #f9f9f9;
+  color: white;
   font-weight: bold;
 }
 
+header h1, main h2 {
+  margin-bottom: 30px;
+}
+
+
+main h2 span {
+  color: #ff4f4f;
+}
+
 .logo {
-  width: 150px;
-  margin: 70px 0;
+  width: 120px;
+  margin: 30px 0px;
 }
 
-p {
+header p {
   font-size: 14px;
-}
-
-.form h2 {
-  text-align: right;
-  color: whitesmoke;
-  font-size: 25px;
 }
 
 section.form {
@@ -81,20 +76,31 @@ section.form {
   border-radius: 6px;
 }
 
-form input, form button {
+.form h2 {
+  text-align: right;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+form input, form button, form select {
   width: 100%;
   margin-bottom: 4px;
   padding: 8px 16px;
+  border: 1px #FFFFFF88 solid;
   border-radius: 4px;
-  border: 1px #ffffff88 solid;
+
 }
 
-form input {
+form input, form select {    
   background-color: transparent;
 }
 
-form input::placeholder {
-  color: #ffffffaa;
+form select {
+  background-color: #ff4f4f;
+}
+
+form input::placeholder, form select {
+  color: #FFFFFFaa
 }
 
 form button {
@@ -116,15 +122,16 @@ main .donors {
   position: relative;
 }
 
-.blood::before{
+.blood::before {
   content: "";
-  background-color: #ff4f4f11;
+  background-color: #ff4f4f33;
   width: 40px;
   height: 40px;
   position: absolute;
   border-radius: 50%;
   border-top-right-radius: 0;
   transform: rotate(-45deg);
+
 }
 
 .donor p {
@@ -141,12 +148,10 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: #ff4f4f;
 }
 
 section.form {
   transition: all 300ms;
-
 }
 
 section.form.hide {

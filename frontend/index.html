@@ -23,9 +23,18 @@
   <section class="form hide">
     <h2>Faça parte da nossa lista de doadores! 🩸</h2>
     <form action="/" method="POST">
-      <input type="text" name="name" placeholder="Nome Completo">
-      <input type="text" name="email" placeholder="Email">
-      <input type="text" name="blood" placeholder="Tipo Sanguíneo">
+      <input type="text" name="name" placeholder="Nome Completo" required="true">
+      <input type="text" name="email" placeholder="Email" required="true">
+      <select name="blood" required="true">
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+      </select>
       <button>Quero ajudar!</button>
     </form>
   </section>
@@ -47,7 +56,7 @@
   </main>
 
   <footer>
-    Com ❤️ e muito ☕ por <a href="https://rocketseat.com.br/"><b>Rocketseat</b></a>
+    Com ❤️ e muito ☕ por <a href="https://rocketseat.com.br/" target="_blank"><b>Rocketseat</b></a>
   </footer>
 </body>
 
