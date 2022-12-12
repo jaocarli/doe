@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "expo": "^36.0.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "node": "^13.8.0",
     "nodemon": "^2.0.2",
     "nunjucks": "^3.2.0",
